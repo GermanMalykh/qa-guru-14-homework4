@@ -1,3 +1,27 @@
 plugins {
     id 'java-library'
 }
+
+def slf4jVersion = "1.7.36",
+    junitVersion = "5.9.0",
+    selenideVersion = "6.6.6"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:$selenideVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "org.slf4j:slf4j-simple:$slf4jVersion"
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
