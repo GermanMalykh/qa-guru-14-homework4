@@ -1,12 +1,12 @@
 package com.demoqa;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -73,18 +73,18 @@ public class RegistrationFormTests {
         $("#submit").click();
 
         //Assertions
-        $(".modal-header").shouldHave(Condition.text("Thanks for submitting the form"));
+        $(".modal-header").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(
-                Condition.text("German Malykh"),
-                Condition.text("gnmalykh@gmail.com"),
-                Condition.text("Male"),
-                Condition.text("8001000800"),
-                Condition.text("17 March,2000"),
-                Condition.text("Physics"),
-                Condition.text("Sports, Music"),
-                Condition.text("avatar.jpg"),
-                Condition.text("Russia, Cherepovets"),
-                Condition.text("Haryana Karnal")
+                text("German Malykh"),
+                text("gnmalykh@gmail.com"),
+                text("Male"),
+                text("8001000800"),
+                text("17 March,2000"),
+                text("Physics"),
+                text("Sports, Music"),
+                text("avatar.jpg"),
+                text("Russia, Cherepovets"),
+                text("Haryana Karnal")
         );
 
         //Close
