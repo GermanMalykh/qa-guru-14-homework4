@@ -74,16 +74,18 @@ public class RegistrationFormTests {
 
         //Assertions
         $(".modal-header").shouldHave(Condition.text("Thanks for submitting the form"));
-        $(".table-responsive").shouldHave(Condition.text("German Malykh"));
-        $(".table-responsive").shouldHave(Condition.text("gnmalykh@gmail.com"));
-        $(".table-responsive").shouldHave(Condition.text("Male"));
-        $(".table-responsive").shouldHave(Condition.text("8001000800"));
-        $(".table-responsive").shouldHave(Condition.text("17 March,2000"));
-        $(".table-responsive").shouldHave(Condition.text("Physics"));
-        $(".table-responsive").shouldHave(Condition.text("Sports, Music"));
-        $(".table-responsive").shouldHave(Condition.text("avatar.jpg"));
-        $(".table-responsive").shouldHave(Condition.text("Russia, Cherepovets"));
-        $(".table-responsive").shouldHave(Condition.text("Haryana Karnal"));
+        $(".table-responsive").shouldHave(
+                Condition.text("German Malykh"),
+                Condition.text("gnmalykh@gmail.com"),
+                Condition.text("Male"),
+                Condition.text("8001000800"),
+                Condition.text("17 March,2000"),
+                Condition.text("Physics"),
+                Condition.text("Sports, Music"),
+                Condition.text("avatar.jpg"),
+                Condition.text("Russia, Cherepovets"),
+                Condition.text("Haryana Karnal")
+        );
 
         //Close
         $("#closeLargeModal").click();
