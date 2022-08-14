@@ -73,6 +73,7 @@ public class RegistrationFormTests {
         $("#submit").click();
 
 
+
         //Assertions
         $(".modal-header").shouldHave(text("Thanks for submitting the form"));
         $(".table-responsive").shouldHave(
