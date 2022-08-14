@@ -61,6 +61,7 @@ public class RegistrationFormTests {
         //Current Address
         $("#currentAddress").setValue("Russia, Cherepovets");
 
+
         //State and City
         $("#state").click();
         $(byText("Haryana")).click();
