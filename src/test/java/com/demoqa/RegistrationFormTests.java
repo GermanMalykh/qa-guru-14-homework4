@@ -18,6 +18,7 @@ public class RegistrationFormTests {
         Configuration.browserSize = "760x840";
     }
 
+
     @Test
     void fillRegistrationFormTest() {
 
@@ -70,6 +71,7 @@ public class RegistrationFormTests {
 
         //Submit
         $("#submit").click();
+
 
         //Assertions
         $(".modal-header").shouldHave(text("Thanks for submitting the form"));
