@@ -18,7 +18,6 @@ public class RegistrationFormTests {
         Configuration.browserSize = "760x840";
     }
 
-
     @Test
     void fillRegistrationFormTest() {
 
@@ -62,7 +61,6 @@ public class RegistrationFormTests {
         //Current Address
         $("#currentAddress").setValue("Russia, Cherepovets");
 
-
         //State and City
         $("#state").click();
         $(byText("Haryana")).click();
@@ -71,8 +69,6 @@ public class RegistrationFormTests {
 
         //Submit
         $("#submit").click();
-
-
 
         //Assertions
         $(".modal-header").shouldHave(text("Thanks for submitting the form"));

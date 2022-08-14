@@ -4,7 +4,7 @@ plugins {
 
 def slf4jVersion = "1.7.36",
     junitVersion = "5.9.0",
-    selenideVersion = "6.6.6"
+    selenideVersion = "6.7.2"
 
 repositories {
     mavenCentral()
