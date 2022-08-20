@@ -113,7 +113,7 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage pictureInput(String fileName) {
+    public RegistrationFormPage setPicture(String fileName) {
         elemetsComponents.pictureLoader(fileName);
 
         return this;
@@ -125,7 +125,7 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage subjectInput(String value) {
+    public RegistrationFormPage setSubject(String value) {
         elemetsComponents.subjectsInsert(value);
 
         return this;
