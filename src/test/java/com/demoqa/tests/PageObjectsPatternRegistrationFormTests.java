@@ -19,6 +19,7 @@ public class PageObjectsPatternRegistrationFormTests {
     void fillRegistrationFormTest() {
         registrationFormPage
                 .openPage()
+                .removeGarbageElements()
                 .setFirstName("German")
                 .setLastName("Malykh")
                 .setEmail("gnmalykh@gmail.com")

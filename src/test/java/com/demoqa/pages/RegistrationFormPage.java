@@ -29,10 +29,14 @@ public class RegistrationFormPage {
     public RegistrationFormPage openPage() {
         open("/automation-practice-form");
         formTitle.shouldHave(text(TITLE_TEXT));
+
+        return this;
+    }
+
+    public RegistrationFormPage removeGarbageElements() {
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('#RightSide_Advertisement').remove()");
-
         return this;
     }
 
