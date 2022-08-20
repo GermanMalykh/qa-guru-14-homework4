@@ -16,7 +16,8 @@ public class SimpleRegistrationFormTests {
     static void configure() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = "chrome";
-        Configuration.browserSize = "760x840";
+        Configuration.browserSize = "1920x1080";
+
     }
 
     @Test
@@ -24,6 +25,9 @@ public class SimpleRegistrationFormTests {
 
         //Url
         open("/automation-practice-form");
+        executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('#RightSide_Advertisement').remove()");
 
         //Name
         $("#firstName").setValue("German");
