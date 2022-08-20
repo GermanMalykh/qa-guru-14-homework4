@@ -4,7 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.demoqa.pages.RegistrationFormPage;
 import org.junit.jupiter.api.*;
 
-public class RegistrationFormTests {
+public class PageObjectsPatternRegistrationFormTests {
 
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
