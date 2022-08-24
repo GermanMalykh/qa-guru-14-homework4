@@ -12,12 +12,11 @@ public class RegistrationFormPage {
     private CalendarComponent calendarComponents = new CalendarComponent();
     private ResultsModal resultsTableComponents = new ResultsModal();
     private SelectComponent selectComponents = new SelectComponent();
-    private ElemetsComponent elemetsComponents = new ElemetsComponent();
+    private ElemetsComponent elementsComponents = new ElemetsComponent();
     private final static String TITLE_TEXT = "Student Registration Form";
     private SelenideElement
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
-            emailInput = $("#userEmail"),
             genderSelect = $("#genterWrapper"),
             phoneNumberInput = $("#userNumber"),
             userEmailInput = $("#userEmail"),
@@ -114,19 +113,19 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage setPicture(String fileName) {
-        elemetsComponents.pictureLoader(fileName);
+        elementsComponents.pictureLoader(fileName);
 
         return this;
     }
 
     public RegistrationFormPage submit() {
-        elemetsComponents.submitButton();
+        elementsComponents.submitButton();
 
         return this;
     }
 
     public RegistrationFormPage setSubject(String value) {
-        elemetsComponents.subjectsInsert(value);
+        elementsComponents.subjectsInsert(value);
 
         return this;
     }
