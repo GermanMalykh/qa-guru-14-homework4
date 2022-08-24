@@ -15,3 +15,8 @@
 
 
 - [HomeWork Result №2](https://github.com/GermanMalykh/qa-guru-14-homework4/blob/main/src/test/java/com/demoqa/tests/PageObjectsPatternRegistrationFormTests.java)
+
+
+## Задание  №3
+
+Вынесите все вводимые и проверяемые значения в переменные, добавьте генерацию данных с Faker
