@@ -16,7 +16,7 @@ public class PageObjectsPatternRegistrationFormTests {
     }
 
     @Test
-    void fillRegistrationFormTest() {
+    void fillRegistrationFormTestPageObjects() {
         registrationFormPage
                 .openPage()
                 .removeGarbageElements()

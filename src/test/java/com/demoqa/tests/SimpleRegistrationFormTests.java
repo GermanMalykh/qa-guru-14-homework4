@@ -21,7 +21,7 @@ public class SimpleRegistrationFormTests {
     }
 
     @Test
-    void fillRegistrationFormTest() {
+    void fillRegistrationFormTestSimple() {
 
         //Url
         open("/automation-practice-form");
