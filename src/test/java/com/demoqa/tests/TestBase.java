@@ -3,6 +3,7 @@ package com.demoqa.tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.junit5.BrowserPerTestStrategyExtension;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import com.demoqa.data.TestData;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -12,6 +13,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 @ExtendWith({BrowserPerTestStrategyExtension.class})
 public class TestBase {
+
+    TestData testData = new TestData();
 
     @BeforeAll
     static void configure() {
@@ -25,20 +28,32 @@ public class TestBase {
         }
 
         Configuration.browserCapabilities = capabilities;
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browser = System.getProperty("browser_name", "chrome");
-        Configuration.browserVersion = System.getProperty("browser_version", "105.0");
-        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
+        Configuration.baseUrl = TestData.baseUrl;
+        Configuration.browser = TestData.browserName;
+        Configuration.browserVersion = TestData.browserVersion;
+        Configuration.browserSize = TestData.browserSize;
+
+        if (TestData.remote == null || TestData.remote.equals("")) {
+        } else {
+            Configuration.remote = "https://"
+                    + TestData.LOGIN_REMOTE + ":"
+                    + TestData.PASSWORD_REMOTE + "@"
+                    + TestData.remote;
+        }
+
+        if (TestData.browserVersion != null) {
+            Configuration.browserVersion = TestData.browserVersion;
+        }
     }
 
     @AfterEach
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
-        if (Configuration.browser.equals("chrome")) {
-            Attach.browserConsoleLogs();
-        }
-        if (System.getProperty("selenide.remote") != null) {
+        Attach.browserConsoleLogs();
+
+        if (TestData.remote == null || TestData.remote.equals("")) {
+        } else {
             Attach.addVideo();
         }
     }
