@@ -52,7 +52,7 @@ public class TestBase {
 
         if (TestData.remote == null || TestData.remote.equals("")) {
         } else {
-            Attach.addVideo(TestData.remote);
+            Attach.addVideo();
         }
     }
 }

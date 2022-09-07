@@ -38,13 +38,13 @@ public class Attach {
 
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
-    public static String addVideo(String remote) {
+    public static String addVideo() {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
-                + getVideoUrl(remote)
+                + getVideoUrl()
                 + "' type='video/mp4'></video></body></html>";
     }
 
-    public static URL getVideoUrl(String remote) {
+    public static URL getVideoUrl() {
         String videoUrl = "https://selenoid.autotests.cloud/video/" + getSessionId() + ".mp4";
 
         try {
