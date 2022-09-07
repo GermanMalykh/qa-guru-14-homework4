@@ -14,8 +14,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 @ExtendWith({BrowserPerTestStrategyExtension.class})
 public class TestBase {
 
-    TestData testData = new TestData();
-
     @BeforeAll
     static void configure() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
@@ -54,7 +52,7 @@ public class TestBase {
 
         if (TestData.remote == null || TestData.remote.equals("")) {
         } else {
-            Attach.addVideo();
+            Attach.addVideo(TestData.remote);
         }
     }
 }
