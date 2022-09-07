@@ -1,7 +1,5 @@
 package com.demoqa.tests;
 
-
-import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.*;
 
 import java.io.File;
@@ -10,15 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class SimpleRegistrationFormTests {
-
-    @BeforeAll
-    static void configure() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browser = "chrome";
-        Configuration.browserSize = "1920x1080";
-
-    }
+public class SimpleRegistrationFormTests extends TestBase {
 
     @Test
     void fillRegistrationFormTestSimple() {

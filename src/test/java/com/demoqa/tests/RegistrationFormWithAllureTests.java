@@ -1,24 +1,15 @@
 package com.demoqa.tests;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.demoqa.data.TestData;
 import com.demoqa.pages.RegistrationFormPageAllure;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class RegistrationFormWithAllureTests {
+public class RegistrationFormWithAllureTests extends TestBase {
 
     RegistrationFormPageAllure registrationFormPageAllure = new RegistrationFormPageAllure();
     TestData testData = new TestData();
-
-    @BeforeAll
-    static void configure() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browser = "chrome";
-        Configuration.browserSize = "1920x1080";
-    }
 
     @Test
     void fillRegistrationFormAllure() {
