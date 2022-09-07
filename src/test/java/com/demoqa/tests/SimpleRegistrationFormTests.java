@@ -1,5 +1,7 @@
 package com.demoqa.tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
 
 import java.io.File;
@@ -10,6 +12,8 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class SimpleRegistrationFormTests extends TestBase {
 
+    @Feature("Заполнение регистрационной формы")
+    @Story("Заполнение формы, простой пример")
     @Test
     void fillRegistrationFormTestSimple() {
 

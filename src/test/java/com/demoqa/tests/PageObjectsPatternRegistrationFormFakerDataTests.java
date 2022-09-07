@@ -2,6 +2,8 @@ package com.demoqa.tests;
 
 import com.demoqa.data.TestData;
 import com.demoqa.pages.RegistrationFormPage;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 
 public class PageObjectsPatternRegistrationFormFakerDataTests extends TestBase {
@@ -9,6 +11,8 @@ public class PageObjectsPatternRegistrationFormFakerDataTests extends TestBase {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     TestData testData = new TestData();
 
+    @Feature("Заполнение регистрационной формы")
+    @Story("Заполнение формы с фейковыми данными")
     @Test
     void fillRegistrationFormTestFaker() {
         registrationFormPage

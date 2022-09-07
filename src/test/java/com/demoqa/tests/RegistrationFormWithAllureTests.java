@@ -3,6 +3,8 @@ package com.demoqa.tests;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.demoqa.data.TestData;
 import com.demoqa.pages.RegistrationFormPageAllure;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +13,8 @@ public class RegistrationFormWithAllureTests extends TestBase {
     RegistrationFormPageAllure registrationFormPageAllure = new RegistrationFormPageAllure();
     TestData testData = new TestData();
 
+    @Feature("Заполнение регистрационной формы")
+    @Story("Заполнение формы с добавлением описаний шагов в Аллюр")
     @Test
     void fillRegistrationFormAllure() {
         SelenideLogger.addListener("allure", new AllureSelenide());

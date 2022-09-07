@@ -1,12 +1,16 @@
 package com.demoqa.tests;
 
 import com.demoqa.pages.RegistrationFormPage;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
 
 public class PageObjectsPatternRegistrationFormTests extends TestBase {
 
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
+    @Feature("Заполнение регистрационной формы")
+    @Story("Заполнение формы используя паттерн \"PageObjects\"")
     @Test
     void fillRegistrationFormTestPageObjects() {
         registrationFormPage
