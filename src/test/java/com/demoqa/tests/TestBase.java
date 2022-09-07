@@ -19,11 +19,6 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        if (System.getProperty("selenide.remote") != null) {
-            Configuration.remote = System.getProperty("selenide.remote");
-            capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
-        }
 
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = TestData.baseUrl;
@@ -37,6 +32,9 @@ public class TestBase {
                     + TestData.LOGIN_REMOTE + ":"
                     + TestData.PASSWORD_REMOTE + "@"
                     + TestData.remote;
+
+            capabilities.setCapability("enableVNC", true);
+            capabilities.setCapability("enableVideo", true);
         }
 
         if (TestData.browserVersion != null) {
