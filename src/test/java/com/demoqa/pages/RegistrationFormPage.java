@@ -12,7 +12,7 @@ public class RegistrationFormPage {
     private CalendarComponent calendarComponents = new CalendarComponent();
     private ResultsModal resultsTableComponents = new ResultsModal();
     private SelectComponent selectComponents = new SelectComponent();
-    private ElemetsComponent elementsComponents = new ElemetsComponent();
+    private ElementsComponent elementsComponents = new ElementsComponent();
     private final static String TITLE_TEXT = "Student Registration Form";
     private SelenideElement
             firstNameInput = $("#firstName"),

@@ -4,26 +4,26 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class ElemetsComponent {
+public class ElementsComponent {
 
     private SelenideElement
             pictureInput = $("#uploadPicture"),
             submit = $("#submit"),
             subjects = $("#subjectsInput");
 
-    public ElemetsComponent pictureLoader(String fileName) {
+    public ElementsComponent pictureLoader(String fileName) {
         pictureInput.uploadFromClasspath(fileName);
 
         return this;
     }
 
-    public ElemetsComponent submitButton() {
+    public ElementsComponent submitButton() {
         submit.click();
 
         return this;
     }
 
-    public ElemetsComponent subjectsInsert(String value) {
+    public ElementsComponent subjectsInsert(String value) {
         subjects.setValue(value).pressEnter();
 
         return this;

@@ -2,7 +2,7 @@ package com.demoqa.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.demoqa.pages.components.CalendarComponent;
-import com.demoqa.pages.components.ElemetsComponent;
+import com.demoqa.pages.components.ElementsComponent;
 import com.demoqa.pages.components.ResultsModal;
 import com.demoqa.pages.components.SelectComponent;
 import io.qameta.allure.Step;
@@ -16,7 +16,7 @@ public class RegistrationFormPageAllure {
     private CalendarComponent calendarComponents = new CalendarComponent();
     private ResultsModal resultsTableComponents = new ResultsModal();
     private SelectComponent selectComponents = new SelectComponent();
-    private ElemetsComponent elementsComponents = new ElemetsComponent();
+    private ElementsComponent elementsComponents = new ElementsComponent();
     private final static String TITLE_TEXT = "Student Registration Form";
     private SelenideElement
             firstNameInput = $("#firstName"),
